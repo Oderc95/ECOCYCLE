@@ -40,7 +40,7 @@ display_set_gui_size(global.view_width, global.view_height);
   /*************************************************************/
  /* CREATIONS D'INSTANCES						              */
 /*************************************************************/
-if !instance_exists(oDevMode) instance_create_layer(0, 0, "Instances", oDevMode);
+if !instance_exists(oDevMode) instance_create_layer(0, 0, "GUI", oDevMode);
 
 
   /*************************************************************/

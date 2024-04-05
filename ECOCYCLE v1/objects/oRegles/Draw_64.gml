@@ -13,7 +13,7 @@ draw_set_alpha(1);
 draw_self();
 
 // Texte pour continuer
-draw_set_font(fnt_large);  
+draw_set_font(fnt_ultra_large);  
 draw_set_halign(fa_center); 
 
 if global.show_rules == 0 {

@@ -54,6 +54,12 @@ if room == rm_50_main {
 		global.show_rules = 1;
 	}
 	//********************************************
+	// Check
+	if !instance_exists(oRegles) && !instance_exists(oBiome_parent) {
+		if !instance_exists(oBiome_parent) instance_create_layer(0, 0, "Instances", oBiome_parent);
+	}/*se if !instance_exists(oRegles) && instance_exists(oBiome_parent) {
+		oBiome_parent.visible = false;
+	}*/
 }
 
 
