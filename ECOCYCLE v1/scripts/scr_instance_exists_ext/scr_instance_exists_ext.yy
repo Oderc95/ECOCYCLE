@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"scr_instance_exists_ext",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_instance_exists_ext",
+  "parent":{
+    "name":"ACTION",
+    "path":"folders/Scripts/ACTION.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

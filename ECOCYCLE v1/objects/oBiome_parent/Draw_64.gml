@@ -14,19 +14,19 @@ var c = c_black,
 	radius = 20;
 	
 // Ecran noir de focus 
-draw_set_alpha(opacity2);
+/*draw_set_alpha(opacity2);
 draw_roundrect_color(0, 0, global.view_width, global.view_height, c, c, false);
-draw_set_alpha(1); 
+draw_set_alpha(1); */
 
 	
 // Fenetre MAP
-draw_set_alpha(opacity3);
+/*draw_set_alpha(opacity3);
 draw_roundrect_color_ext(marge_w, marge_h, global.view_width - marge_w, global.view_height - marge_h, 
 						 radius, radius, c1, c1, false);
 draw_set_alpha(opacity1);
 draw_roundrect_color_ext(marge_w, marge_h, global.view_width - marge_w, global.view_height - marge_h, 
 						 radius, radius, c3, c3, true); 
-draw_set_alpha(1);
+draw_set_alpha(1);*/
 
   //---------------------------------------------------------
  // Dessin de la MAP

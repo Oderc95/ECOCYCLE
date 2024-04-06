@@ -1,7 +1,7 @@
 ///@desc scr_selected_plante()
-function scr_selected_plante(){
+function scr_selected_graine(){
 	
-	global.selectedPlante = id;
+	global.selectedGraine = id;
 	
 	
 }

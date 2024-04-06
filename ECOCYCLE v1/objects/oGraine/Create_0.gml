@@ -1,7 +1,13 @@
 /// @description Init
 
-id_plante = noone;
-sprite_plante = noone;
+
+// Set parameter
+scale = 3; 
+image_xscale = scale;
+image_yscale = scale;
+
+id_graine = noone;
+sprite_graine = noone;
 
 // States
 isSelected = false;

@@ -9,18 +9,23 @@ opacity3 = 0;
 opacity4 = 0;
 
   //**************************************************************
- // MAP VARIABLES
+ // GRAINES
 //****************************************************************
 list_graines = ds_list_create();
 
-// [id, sprite, categorie]
-// Création de la liste des plantes
-/*ds_list_add(list_graines,		 
-		    [0, "sPlante", 1 ], 
-			
-			);*/
-
-
+// Création de la liste des graines 
+ds_list_add(list_graines,
+//		    [id, sprite_icon,	sprite_map,			taille,		evolution, life]
+		    [0, "sPlante",		"sTile_graine",		1,			0,			3], 
+			[1, "sPlante",		"sTile_graine",		1,			0,			3], 
+			[2, "sPlante",		"sTile_graine",		1,			0,			3], 
+			);
+ 
+ 
+ 
+  //**************************************************************
+ // MAP VARIABLES
+//****************************************************************
  
 // Tile size
 tile_scale = 1.7;
