@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "scr_create_ds_grid_from_array",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "AUTRES",
-    "path": "folders/Scripts/AUTRES.yy",
+  "$GMScript":"",
+  "%Name":"scr_create_ds_grid_from_array",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_create_ds_grid_from_array",
+  "parent":{
+    "name":"AUTRES",
+    "path":"folders/Scripts/AUTRES.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

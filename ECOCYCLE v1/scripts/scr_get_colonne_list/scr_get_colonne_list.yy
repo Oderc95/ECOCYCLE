@@ -1,12 +1,12 @@
 {
   "$GMScript":"",
-  "%Name":"scr_draw_circular_bar",
+  "%Name":"scr_get_colonne_list",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"scr_draw_circular_bar",
+  "name":"scr_get_colonne_list",
   "parent":{
-    "name":"DRAW",
-    "path":"folders/Scripts/DRAW.yy",
+    "name":"MAP",
+    "path":"folders/Scripts/MAP.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",
