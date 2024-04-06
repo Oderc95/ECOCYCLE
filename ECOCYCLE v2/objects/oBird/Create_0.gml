@@ -8,6 +8,7 @@ image_xscale = scale;
 image_yscale = scale;
 
 id_bird = noone;
+id_ressource = id_bird;
 sprite_bird = noone;
 
 // States

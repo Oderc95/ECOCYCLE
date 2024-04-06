@@ -1,6 +1,6 @@
 /// @description draw plant
 
-depth = -bbox_bottom;
+//depth = -bbox_bottom;
 	
 if sprite_graine {
 	// Calcul du centre de l'image
@@ -9,9 +9,7 @@ if sprite_graine {
 		c = c_black,
 		c1 = c_teal;
 		
-	// On garde les plantes au premier plan
- 
-
+	// On garde les plantes au premier plan 
 	draw_set_alpha(oBiome_parent.opacity1);
 	//draw_sprite_ext(sprite_graine, -1, _x, _y + 5, 1, 1, 0, c1, oBiome_parent.opacity1);
 	scr_createButton_ext(x, y, sprite_graine, 0, 1, 1, 1, 1, 1, 1, scr_selected_ressource);

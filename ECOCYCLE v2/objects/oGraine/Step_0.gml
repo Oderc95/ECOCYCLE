@@ -2,7 +2,7 @@
 
 event_inherited();
 
-//depth = 100; 
+depth = 100; 
 
 // Fade affichage
 if instance_exists(oBiome_parent) {

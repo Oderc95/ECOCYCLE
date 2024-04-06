@@ -30,6 +30,7 @@
     {"name":"fnt_small","order":5,"path":"fonts/fnt_small/fnt_small.yy",},
     {"name":"fnt_ultra_large","order":4,"path":"fonts/fnt_ultra_large/fnt_ultra_large.yy",},
     {"name":"oBird","order":6,"path":"objects/oBird/oBird.yy",},
+    {"name":"oBird_move","order":8,"path":"objects/oBird_move/oBird_move.yy",},
     {"name":"oDevMode","order":1,"path":"objects/oDevMode/oDevMode.yy",},
     {"name":"oGame","order":3,"path":"objects/oGame/oGame.yy",},
     {"name":"oGraine","order":5,"path":"objects/oGraine/oGraine.yy",},

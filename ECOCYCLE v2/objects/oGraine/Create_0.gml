@@ -8,6 +8,7 @@ image_xscale = scale;
 image_yscale = scale;
 
 id_graine = noone;
+id_ressource = id_graine;
 sprite_graine = noone; 
 
 // States

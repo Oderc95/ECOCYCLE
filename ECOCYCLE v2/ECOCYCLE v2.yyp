@@ -64,6 +64,7 @@
     {"id":{"name":"o_intro_scientist","path":"objects/o_intro_scientist/o_intro_scientist.yy",},},
     {"id":{"name":"oBiome_parent","path":"objects/oBiome_parent/oBiome_parent.yy",},},
     {"id":{"name":"oBird","path":"objects/oBird/oBird.yy",},},
+    {"id":{"name":"oBird_move","path":"objects/oBird_move/oBird_move.yy",},},
     {"id":{"name":"oDevMode","path":"objects/oDevMode/oDevMode.yy",},},
     {"id":{"name":"oGame","path":"objects/oGame/oGame.yy",},},
     {"id":{"name":"oGraine","path":"objects/oGraine/oGraine.yy",},},

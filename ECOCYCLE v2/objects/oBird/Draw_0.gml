@@ -1,6 +1,6 @@
 /// @description draw plant
 
-depth = -bbox_bottom;
+//depth = -bbox_bottom;
 	
 if sprite_bird {
 	// Calcul du centre de l'image
