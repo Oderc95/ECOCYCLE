@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "scr_show_deck",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "AUTRES",
-    "path": "folders/Scripts/AUTRES.yy",
+  "$GMScript":"",
+  "%Name":"scr_show_deck",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_show_deck",
+  "parent":{
+    "name":"AUTRES",
+    "path":"folders/Scripts/AUTRES.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }
