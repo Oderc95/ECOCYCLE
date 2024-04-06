@@ -12,21 +12,6 @@ var c = c_black,
 	marge_w = 170,
 	marge_h = 120,
 	radius = 20;
-	
-// Ecran noir de focus 
-/*draw_set_alpha(opacity2);
-draw_roundrect_color(0, 0, global.view_width, global.view_height, c, c, false);
-draw_set_alpha(1); */
-
-	
-// Fenetre MAP
-/*draw_set_alpha(opacity3);
-draw_roundrect_color_ext(marge_w, marge_h, global.view_width - marge_w, global.view_height - marge_h, 
-						 radius, radius, c1, c1, false);
-draw_set_alpha(opacity1);
-draw_roundrect_color_ext(marge_w, marge_h, global.view_width - marge_w, global.view_height - marge_h, 
-						 radius, radius, c3, c3, true); 
-draw_set_alpha(1);*/
 
   //---------------------------------------------------------
  // Dessin de la MAP
@@ -70,7 +55,7 @@ if ds_exists(tile_positions_list, ds_type_list) && ds_list_size(tile_positions_l
 		var tile_sideB		= ds_list_find_value(tile_positions_list, i + 9); 
 		var tile_sideBD		= ds_list_find_value(tile_positions_list, i + 10); 
 		var tile_sideD		= ds_list_find_value(tile_positions_list, i + 11); 
-		var tile_value		= ds_list_find_value(tile_positions_list, i + 12); 
+		var tile_value		= ds_list_find_value(tile_positions_list, i + 12); // ID de la graine
 		
 		var tile_col = c_white; 
 		
@@ -90,15 +75,58 @@ if ds_exists(tile_positions_list, ds_type_list) && ds_list_size(tile_positions_l
 		
 		var c = c_white,
 			c1 = #EF9797,
-			r = sprite_get_height(sTile_hover) - 14;   
+			r = sprite_get_height(sTile_hover) - 14,
+			cpt_fouille = 3;   
 		
 		// Hover tile
 		if point_in_circle(mouse_x, mouse_y, tile_x, tile_y + r, r) { 
 			draw_sprite_ext(sTile_hover, -1, tile_x, tile_y, tile_scale, tile_scale, 0, c1, 0.7);
 			//draw_circle(tile_x, tile_y + r, r, 1);
+			
+			// GESTION DE LA FOUILLE 
+			if mouse_check_button(global.key_interact_map) { 
+				if tile_value == 0 {
+					
+					start_fouille = min(start_fouille + 0.05, cpt_fouille); 
+					
+					// FX
+					if start_fouille >= 0.5 {
+						FX_fouille_index = (FX_fouille_index + FX_fouille_spd / (game_get_speed(gamespeed_fps) / sprite_get_speed(sTile_FX))) % sprite_get_number(sTile_FX);
+						draw_sprite_ext(sTile_FX, FX_fouille_index, tile_x, tile_y, tile_scale, tile_scale, 0, c_white, 1); 
+					}
+				
+					scr_draw_circular_bar(mouse_x, mouse_y, start_fouille, cpt_fouille, c_lime, 15, 1, 8)
+					if start_fouille == cpt_fouille && global.selectedGraine != noone {  
+						tile_positions_grid[# 12, i] = global.selectedGraine.id_graine;
+						show_debug_message(tile_positions_grid[# 12, i]);
+					}
+				}else if tile_value != 0 {
+					start_fouille = 0;
+					// Message de fin de fouille
+					global.gui_msg = "Zone déjà cultivée !";
+					global.new_msg_event = true; 
+				}
+			}else{
+				start_fouille = 0; 
+			}
 		}
 		
-		
+		// TILE DE LA ZONE FOUILLEE
+		if tile_value != 0 {
+			
+			// Back
+			draw_sprite_ext(sTile_hover, -1, tile_x, tile_y, tile_scale, tile_scale, 0, c_maroon, 1);
+			
+			// Dessin du sprite de l'asset trouvé
+			if ds_exists(oBiome_parent.list_graines, ds_type_list) { 
+				//var spr = asset_get_index(ds_list_find_value(oBiome_parent.list_graines, i)[1]);  
+				//show_debug_message(ds_list_find_value(oBiome_parent.list_graines, i)[3]); 
+				var spr = oBiome_parent.list_graines[| tile_positions_grid[# 14, i]][0];
+				show_debug_message(spr);
+				var ty = tile_y - 8 * sin(get_timer()/1500000); 
+				draw_sprite_ext(asset_get_index(spr), -1, tile_x, ty - 24, 1, 1, 0, image_blend, 1);
+			}
+		}
 		
 		
 		
@@ -111,9 +139,9 @@ if ds_exists(tile_positions_list, ds_type_list) && ds_list_size(tile_positions_l
 	 // Draw GUI Texte
 	//**************************************************************** 
 	// Nom du site de fouille
-	scr_draw_set_text(c_white, fnt_large, fa_left, fa_top);
+	/*scr_draw_set_text(c_white, fnt_large, fa_left, fa_top);
 	draw_text_color(global.view_x + 180, global.view_y + 120, $"[ BIOME 1 ]", c3, c3, c3, c3, opacity1);
-	draw_set_font(fnt_base);
+	draw_set_font(fnt_base);*/
 	
 }   
 

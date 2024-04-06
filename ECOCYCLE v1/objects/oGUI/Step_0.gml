@@ -55,10 +55,41 @@ if instance_exists(oBiome_parent) && (ds_exists(oBiome_parent.list_graines, ds_t
 			current_instance[j].y = graine_y; 
 		}
 
-	#endregion
-
+	#endregion 
 
 }
 
+ //**********************************************************************
+ // Selection des assets
+//************************************************************************
 
+#region Sélection des assets 
+	// Gestion du HOVER
+	if (global.selectedGraine != noone) && instance_exists(global.selectedGraine) { 
+		// On met mon asset à true
+		global.selectedGraine.isSelected = true;
+		// Toutes les autres assets à false
+		for (var i = 0; i < instance_number(oGraine); i++;) {
+			graine[i] = instance_find(oGraine, i);
+			if graine[i] != global.selectedGraine {
+				graine[i].isSelected = false; 
+			}
+		} 
+	}
+	
+	// Reset all hover variables
+	/*if instance_exists(oGraine) {
+		var nb_hover = scr_check_hover_all_graine(oGraine, oGraine.sprite_graine);
+		if nb_hover == 0 {
+			with(oGraine) {
+				isHover = false;
+			}
+		}
+	}*/
+	
+	//if ds_exists(list_asset_current_page, ds_type_list) {
+	//	scr_show_deck(list_asset_current_page);
+	//}
+
+#endregion
 
