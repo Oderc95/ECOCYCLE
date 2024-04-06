@@ -1,11 +1,13 @@
 {
   "$GMObject":"",
-  "%Name":"oPlante",
+  "%Name":"oGraine",
   "eventList":[
     {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"oPlante",
+  "name":"oGraine",
   "overriddenProperties":[],
   "parent":{
     "name":"0 - GAME CONTROL",
@@ -29,10 +31,7 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":{
-    "name":"sTile_plante",
-    "path":"sprites/sTile_plante/sTile_plante.yy",
-  },
+  "spriteId":null,
   "spriteMaskId":null,
   "visible":true,
 }

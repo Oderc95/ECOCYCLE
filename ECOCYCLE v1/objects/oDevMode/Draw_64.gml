@@ -31,8 +31,11 @@ draw_text_color(20, 20, "--------------------------------------\n" +
 						"--------------------------------------\n", c, c, c, c, 1);
 
 //** Draw variables ***************************************************************************************
-scr_draw_text( , 80,	"Room actuelle",	room_actuelle);
-scr_draw_text( , 100,	"Jeu en pause",		global.pause);
+scr_draw_text( , 80,	"Room actuelle",			room_actuelle);
+scr_draw_text( , 100,	"Jeu en pause",				global.pause);
+if instance_exists(oBiome_parent) scr_draw_text( , 120,	"start_fouille",	oBiome_parent.start_fouille);
+scr_draw_text( , 140,	"global.selectedGraine",	global.selectedGraine);
+
 
 
 

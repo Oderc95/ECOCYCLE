@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"scr_check_hover_all_graine",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_check_hover_all_graine",
+  "parent":{
+    "name":"ACTION",
+    "path":"folders/Scripts/ACTION.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}
