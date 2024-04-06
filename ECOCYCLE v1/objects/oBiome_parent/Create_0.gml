@@ -11,7 +11,16 @@ opacity4 = 0;
   //**************************************************************
  // MAP VARIABLES
 //****************************************************************
-/// @description Map setting
+list_graines = ds_list_create();
+
+// [id, sprite, categorie]
+// Création de la liste des plantes
+/*ds_list_add(list_graines,		 
+		    [0, "sPlante", 1 ], 
+			
+			);*/
+
+
  
 // Tile size
 tile_scale = 1.7;

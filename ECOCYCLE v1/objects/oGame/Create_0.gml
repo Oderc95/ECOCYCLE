@@ -29,6 +29,8 @@ global.key_rules			= ord("I");
 global.new_msg_event		=  false; 
 global.gui_msg				=  ""; 
 
+// Id Selection
+global.selectedPlante		=  noone;
 
   /*************************************************************/
  /* INITIALISATION							                  */
