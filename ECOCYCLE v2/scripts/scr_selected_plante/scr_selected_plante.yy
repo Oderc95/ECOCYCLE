@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"scr_selected_plante",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_selected_plante",
+  "parent":{
+    "name":"ACTION",
+    "path":"folders/Scripts/ACTION.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}
