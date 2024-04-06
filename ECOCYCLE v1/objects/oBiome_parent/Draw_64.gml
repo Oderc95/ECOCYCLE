@@ -60,7 +60,10 @@ if ds_exists(tile_positions_list, ds_type_list) && ds_list_size(tile_positions_l
 	for (var i = 0; i < ds_list_size(tile_positions_list); i += 13) {
 		var tile_id = ds_list_find_value(tile_positions_list, i);
 		var tile_x = ds_list_find_value(tile_positions_list, i + 1);
+		var tile_y = ds_list_find_value(tile_positions_list, i + 2);
 		var tile_y = ds_list_find_value(tile_positions_list, i + 2); 
+		
+		
 		var tile_col = c_white; 
 		
 		// Crée l'instance de l'objet avec le sprite de losange
