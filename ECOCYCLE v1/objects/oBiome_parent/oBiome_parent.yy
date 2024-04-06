@@ -10,8 +10,8 @@
   "name":"oBiome_parent",
   "overriddenProperties":[],
   "parent":{
-    "name":"0 - GAME CONTROL",
-    "path":"folders/Objets/0 - GAME CONTROL.yy",
+    "name":"ECOCYCLE v1",
+    "path":"ECOCYCLE v1.yyp",
   },
   "parentObjectId":null,
   "persistent":false,
