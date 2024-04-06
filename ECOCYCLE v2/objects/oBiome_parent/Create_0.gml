@@ -63,10 +63,11 @@ tile_positions_list = ds_list_create();
 list_biome = ds_list_create();
 
 // Stockage des informations
-var tile_id = 1,
-	tile_x = 0,
-	tile_y = 0;
-
+var tile_id		= 1,
+	tile_x		= 0,
+	tile_y		= 0;
+	tile_value	= 0;
+	
 for (var i = 0; i < nb_row; i++) {
     for (var j = 0; j < nb_col; j++) {
 		// Ajoute les positions à la liste
@@ -82,8 +83,8 @@ for (var i = 0; i < nb_row; i++) {
 				tile_sideBG		= tile_id + nb_row - 1,
 				tile_sideB		= tile_id + nb_row,
 				tile_sideBD		= tile_id + nb_row + 1,
-				tile_sideD		= tile_id + 1,
-				tile_value		= 0;
+				tile_sideD		= tile_id + 1;
+				
 			
 			// Ajout à "tile_positions_list" des parametres
 			ds_list_add(tile_positions_list, tile_id);
@@ -109,7 +110,7 @@ for (var i = 0; i < nb_row; i++) {
 
 var tile_positions_grid_array = [];
 if ds_exists(tile_positions_list, ds_type_list) {
-	for (var i = 0; i < ds_list_size(tile_positions_list); i += 14) {
+	for (var i = 0; i < ds_list_size(tile_positions_list); i += 13) {
 		var tile_id			= ds_list_find_value(tile_positions_list, i); 
 		var tile_x			= ds_list_find_value(tile_positions_list, i + 1);		
 		var tile_y			= ds_list_find_value(tile_positions_list, i + 2);
@@ -131,6 +132,9 @@ if ds_exists(tile_positions_list, ds_type_list) {
 
 tile_positions_grid = scr_create_ds_grid_from_array(tile_positions_grid_array);
 tile_positions_grid_number = ds_grid_height(tile_positions_grid);
+
+show_debug_message(tile_positions_grid_array);
+
 
 
   //**********************************************************************

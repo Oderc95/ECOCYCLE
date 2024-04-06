@@ -65,6 +65,7 @@ if ds_exists(tile_positions_list, ds_type_list) && ds_list_size(tile_positions_l
 		
 		// Debug
 		//draw_text_color(tile_x, tile_y + 4, $"id : {tile_id}\nHG : {tile_sideHG}\nH : {tile_sideH}\nHD : {tile_sideHD}\nG : {tile_sideG}\nBG : {tile_sideBG}\nB : {tile_sideB}\nBD : {tile_sideBD}\nD : {tile_sideD}\n", c1, c1, c1, c1, 1);
+		draw_text_color(tile_x, tile_y + 4, $"value : {tile_value}", c1, c1, c1, c1, 1);
 	}
 	
 	// HOVER MANAGE 
@@ -83,12 +84,13 @@ if ds_exists(tile_positions_list, ds_type_list) && ds_list_size(tile_positions_l
 		var tile_sideD		= tile_positions_grid[# 11, i];  
 		var tile_value		= tile_positions_grid[# 12, i];  
 		 
-		show_debug_message($"tile_id = {tile_id} // tile_value = {tile_value}")
+		//show_debug_message($"tile_id = {tile_id} // tile_value = {tile_value}")
 		
 		var c = c_white,
 			c1 = #EF9797,
 			r = sprite_get_height(sTile_hover) - 14,
-			cpt_fouille = 3;   
+			cpt_fouille = 3;
+			
 		draw_circle(tile_x, tile_y + r, r, 1);
 		// Hover tile
 		if point_in_circle(mouse_x, mouse_y, tile_x, tile_y + r, r) { 
@@ -106,8 +108,8 @@ if ds_exists(tile_positions_list, ds_type_list) && ds_list_size(tile_positions_l
 						FX_fouille_index = (FX_fouille_index + FX_fouille_spd / (game_get_speed(gamespeed_fps) / sprite_get_speed(sTile_FX))) % sprite_get_number(sTile_FX);
 						draw_sprite_ext(sTile_FX, FX_fouille_index, tile_x, tile_y, tile_scale, tile_scale, 0, c_white, 1); 
 					}
-				
-					scr_draw_circular_bar(mouse_x, mouse_y, start_fouille, cpt_fouille, c_lime, 15, 1, 8)
+					
+					scr_draw_circular_bar(mouse_x, mouse_y, start_fouille, cpt_fouille, c_lime, 15, 1, 8);
 					if start_fouille == cpt_fouille && global.selectedGraine != noone {  
 						tile_positions_grid[# 12, i] = global.selectedGraine.id_graine;
 						show_debug_message(tile_positions_grid[# 12, i]);
