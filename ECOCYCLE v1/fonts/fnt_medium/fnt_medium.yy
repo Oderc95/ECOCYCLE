@@ -215,8 +215,8 @@
   "maintainGms1Font":false,
   "name":"fnt_medium",
   "parent":{
-    "name":"ECOCYCLE v1",
-    "path":"ECOCYCLE v1.yyp",
+    "name":"GENERAL",
+    "path":"folders/Polices/GENERAL.yy",
   },
   "pointRounding":0,
   "ranges":[

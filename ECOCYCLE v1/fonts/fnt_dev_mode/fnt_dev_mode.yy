@@ -216,7 +216,7 @@
   "name":"fnt_dev_mode",
   "parent":{
     "name":"GENERAL",
-    "path":"folders/Fonts/GENERAL.yy",
+    "path":"folders/Polices/GENERAL.yy",
   },
   "pointRounding":0,
   "ranges":[
