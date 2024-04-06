@@ -10,8 +10,8 @@
   "name":"oRegles",
   "overriddenProperties":[],
   "parent":{
-    "name":"1 - AUTRES",
-    "path":"folders/Objets/1 - AUTRES.yy",
+    "name":"ECOCYCLE v1",
+    "path":"ECOCYCLE v1.yyp",
   },
   "parentObjectId":null,
   "persistent":false,
