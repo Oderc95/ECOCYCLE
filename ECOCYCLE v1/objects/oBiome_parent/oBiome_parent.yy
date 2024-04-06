@@ -10,8 +10,8 @@
   "name":"oBiome_parent",
   "overriddenProperties":[],
   "parent":{
-    "name":"ECOCYCLE v1",
-    "path":"ECOCYCLE v1.yyp",
+    "name":"Objects",
+    "path":"folders/Objects.yy",
   },
   "parentObjectId":null,
   "persistent":false,
