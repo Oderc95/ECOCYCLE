@@ -69,19 +69,31 @@ if ds_exists(tile_positions_list, ds_type_list) && ds_list_size(tile_positions_l
 	
 	// HOVER MANAGE 
 	for (var i = 0; i < tile_positions_grid_number; i++) {   
-		var tile_id		= tile_positions_grid[# 0, i];
-		var tile_x		= tile_positions_grid[# 1, i];
-		var tile_y		= tile_positions_grid[# 2, i]; 
+		var tile_id			= tile_positions_grid[# 0, i];
+		var tile_x			= tile_positions_grid[# 1, i];
+		var tile_y			= tile_positions_grid[# 2, i]; 
+		var tile_categorie	= tile_positions_grid[# 3, i]; 
+		var tile_sideHG		= tile_positions_grid[# 4, i]; 
+		var tile_sideH		= tile_positions_grid[# 5, i]; 
+		var tile_sideHD		= tile_positions_grid[# 6, i]; 
+		var tile_sideG		= tile_positions_grid[# 7, i]; 
+		var tile_sideBG		= tile_positions_grid[# 8, i]; 
+		var tile_sideB		= tile_positions_grid[# 9, i]; 
+		var tile_sideBD		= tile_positions_grid[# 10, i]; 
+		var tile_sideD		= tile_positions_grid[# 11, i];  
+		var tile_value		= tile_positions_grid[# 12, i];  
+		 
+		show_debug_message($"tile_id = {tile_id} // tile_value = {tile_value}")
 		
 		var c = c_white,
 			c1 = #EF9797,
 			r = sprite_get_height(sTile_hover) - 14,
 			cpt_fouille = 3;   
-		
+		draw_circle(tile_x, tile_y + r, r, 1);
 		// Hover tile
 		if point_in_circle(mouse_x, mouse_y, tile_x, tile_y + r, r) { 
 			draw_sprite_ext(sTile_hover, -1, tile_x, tile_y, tile_scale, tile_scale, 0, c1, 0.7);
-			//draw_circle(tile_x, tile_y + r, r, 1);
+			
 			
 			// GESTION DE LA FOUILLE 
 			if mouse_check_button(global.key_interact_map) { 
@@ -112,7 +124,7 @@ if ds_exists(tile_positions_list, ds_type_list) && ds_list_size(tile_positions_l
 		}
 		
 		// TILE DE LA ZONE FOUILLEE
-		if tile_value != 0 {
+		/*if tile_value != 0 {
 			
 			// Back
 			draw_sprite_ext(sTile_hover, -1, tile_x, tile_y, tile_scale, tile_scale, 0, c_maroon, 1);
@@ -121,12 +133,11 @@ if ds_exists(tile_positions_list, ds_type_list) && ds_list_size(tile_positions_l
 			if ds_exists(oBiome_parent.list_graines, ds_type_list) { 
 				//var spr = asset_get_index(ds_list_find_value(oBiome_parent.list_graines, i)[1]);  
 				//show_debug_message(ds_list_find_value(oBiome_parent.list_graines, i)[3]); 
-				var spr = oBiome_parent.list_graines[| tile_positions_grid[# 14, i]][0];
+				var spr = oBiome_parent.list_graines[| tile_positions_grid[# 12, i]][0];
 				show_debug_message(spr);
-				var ty = tile_y - 8 * sin(get_timer()/1500000); 
-				draw_sprite_ext(asset_get_index(spr), -1, tile_x, ty - 24, 1, 1, 0, image_blend, 1);
+				draw_sprite_ext(asset_get_index(spr), -1, tile_x, tile_x, 1, 1, 0, image_blend, 1);
 			}
-		}
+		}*/
 		
 		
 		

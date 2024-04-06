@@ -40,9 +40,9 @@ if instance_exists(oBiome_parent) && (ds_exists(oBiome_parent.list_graines, ds_t
 			var num_columns = 1;
 			
 			// Définir la position de départ
-			var start_x = 150;
+			var start_x = 100;
 			var start_y = 150;
-				
+			
 			// Calculer la position de la carte en fonction de la ligne et de la colonne
 			var row = floor(j / num_columns);
 			var col = j % num_columns;

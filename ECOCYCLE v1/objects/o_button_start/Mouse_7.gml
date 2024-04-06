@@ -1,2 +1,2 @@
 /// @description Start game
-room_goto(rm_intro);
+room_goto(rm_level);
