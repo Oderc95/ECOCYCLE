@@ -30,7 +30,10 @@ global.new_msg_event		=  false;
 global.gui_msg				=  ""; 
 
 // Id Selection
-global.selectedGraine		=  noone;
+global.selectedRessource		=  noone;
+global.selectedTile				=  noone;
+global.selectedRessource		=  noone;
+global.type_selectedRessource	=  noone;
 
   /*************************************************************/
  /* INITIALISATION							                  */

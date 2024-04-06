@@ -29,7 +29,7 @@ if ds_exists(tile_positions_list, ds_type_list) && ds_list_size(tile_positions_l
 	 // Draw shadow TileMap
 	//****************************************************************
 	// Parcourir la liste en utilisant une boucle for
-	for (var i = 0; i < ds_list_size(tile_positions_list); i += 13) { 
+	for (var i = 0; i < ds_list_size(tile_positions_list); i += 14) { 
 		var tile_x = ds_list_find_value(tile_positions_list, i + 1);
 		var tile_y = ds_list_find_value(tile_positions_list, i + 2); 
 	
@@ -42,7 +42,7 @@ if ds_exists(tile_positions_list, ds_type_list) && ds_list_size(tile_positions_l
 	 // TileMap
 	//**************************************************************** 
 	// Parcourir la liste en utilisant une boucle for
-	for (var i = 0; i < ds_list_size(tile_positions_list); i += 13) {
+	for (var i = 0; i < ds_list_size(tile_positions_list); i += 14) {
 		var tile_id			= ds_list_find_value(tile_positions_list, i);
 		var tile_x			= ds_list_find_value(tile_positions_list, i + 1);
 		var tile_y			= ds_list_find_value(tile_positions_list, i + 2);
@@ -56,6 +56,7 @@ if ds_exists(tile_positions_list, ds_type_list) && ds_list_size(tile_positions_l
 		var tile_sideBD		= ds_list_find_value(tile_positions_list, i + 10); 
 		var tile_sideD		= ds_list_find_value(tile_positions_list, i + 11); 
 		var tile_value		= ds_list_find_value(tile_positions_list, i + 12); // ID de la graine
+		var tile_typeRessource		= ds_list_find_value(tile_positions_list, i + 13); 
 		
 		var tile_col = c_white; 
 		
@@ -65,7 +66,7 @@ if ds_exists(tile_positions_list, ds_type_list) && ds_list_size(tile_positions_l
 		
 		// Debug
 		//draw_text_color(tile_x, tile_y + 4, $"id : {tile_id}\nHG : {tile_sideHG}\nH : {tile_sideH}\nHD : {tile_sideHD}\nG : {tile_sideG}\nBG : {tile_sideBG}\nB : {tile_sideB}\nBD : {tile_sideBD}\nD : {tile_sideD}\n", c1, c1, c1, c1, 1);
-		draw_text_color(tile_x, tile_y + 4, $"value : {tile_value}", c1, c1, c1, c1, 1);
+		
 	}
 	
 	// HOVER MANAGE 
@@ -83,7 +84,8 @@ if ds_exists(tile_positions_list, ds_type_list) && ds_list_size(tile_positions_l
 		var tile_sideBD		= tile_positions_grid[# 10, i]; 
 		var tile_sideD		= tile_positions_grid[# 11, i];  
 		var tile_value		= tile_positions_grid[# 12, i];  
-		 
+		var tile_value		= tile_positions_grid[# 13, i];  
+		
 		//show_debug_message($"tile_id = {tile_id} // tile_value = {tile_value}")
 		
 		var c = c_white,
@@ -91,14 +93,15 @@ if ds_exists(tile_positions_list, ds_type_list) && ds_list_size(tile_positions_l
 			r = sprite_get_height(sTile_hover) - 14,
 			cpt_fouille = 3;
 			
-		draw_circle(tile_x, tile_y + r, r, 1);
+		//draw_circle(tile_x, tile_y + r, r, 1);
 		// Hover tile
 		if point_in_circle(mouse_x, mouse_y, tile_x, tile_y + r, r) { 
-			draw_sprite_ext(sTile_hover, -1, tile_x, tile_y, tile_scale, tile_scale, 0, c1, 0.7);
-			
+			draw_sprite_ext(sTile_hover, -1, tile_x, tile_y, tile_scale, tile_scale, 0, c1, 1);
+			global.selectedTile = tile_id;
 			
 			// GESTION DE LA FOUILLE 
-			if mouse_check_button(global.key_interact_map) { 
+			if mouse_check_button(global.key_interact_map) && global.selectedRessource != noone && global.selectedTile != noone { 
+				
 				if tile_value == 0 {
 					
 					start_fouille = min(start_fouille + 0.05, cpt_fouille); 
@@ -110,9 +113,15 @@ if ds_exists(tile_positions_list, ds_type_list) && ds_list_size(tile_positions_l
 					}
 					
 					scr_draw_circular_bar(mouse_x, mouse_y, start_fouille, cpt_fouille, c_lime, 15, 1, 8);
-					if start_fouille == cpt_fouille && global.selectedGraine != noone {  
-						tile_positions_grid[# 12, i] = global.selectedGraine.id_graine;
-						show_debug_message(tile_positions_grid[# 12, i]);
+					if start_fouille == cpt_fouille && tile_positions_grid[# 12, global.selectedTile - 1] != global.selectedRessource.id_ressource {  
+						//show_debug_message(global.selectedRessource.id_ressource);
+						
+						// MAJ de tile_value 
+						tile_positions_grid[# 12, global.selectedTile - 1] = global.selectedRessource.id_ressource;
+						
+						// MAJ du type de ressource
+						tile_positions_grid[# 13, global.selectedTile - 1] = global.type_selectedRessource;
+						//show_debug_message(tile_positions_grid[# 13, i]);
 					}
 				}else if tile_value != 0 {
 					start_fouille = 0;
@@ -120,28 +129,35 @@ if ds_exists(tile_positions_list, ds_type_list) && ds_list_size(tile_positions_l
 					global.gui_msg = "Zone déjà cultivée !";
 					global.new_msg_event = true; 
 				}
-			}else{
+			}else{ 
 				start_fouille = 0; 
 			}
 		}
 		
 		// TILE DE LA ZONE FOUILLEE
-		/*if tile_value != 0 {
+		if tile_value != 0 {
 			
 			// Back
-			draw_sprite_ext(sTile_hover, -1, tile_x, tile_y, tile_scale, tile_scale, 0, c_maroon, 1);
+			//draw_sprite_ext(sTile_hover, -1, tile_x, tile_y, tile_scale, tile_scale, 0, c_maroon, 1);
 			
-			// Dessin du sprite de l'asset trouvé
-			if ds_exists(oBiome_parent.list_graines, ds_type_list) { 
-				//var spr = asset_get_index(ds_list_find_value(oBiome_parent.list_graines, i)[1]);  
-				//show_debug_message(ds_list_find_value(oBiome_parent.list_graines, i)[3]); 
-				var spr = oBiome_parent.list_graines[| tile_positions_grid[# 12, i]][0];
-				show_debug_message(spr);
-				draw_sprite_ext(asset_get_index(spr), -1, tile_x, tile_x, 1, 1, 0, image_blend, 1);
+			if tile_positions_grid[# 13, global.selectedTile - 1] == 2 { // GRAINE
+				// Dessin du sprite de l'asset trouvé
+				if ds_exists(list_graines, ds_type_list) { 
+					var spr = list_graines[| tile_positions_grid[# 12, i]][2]; 
+					var evolution = list_graines[| tile_positions_grid[# 12, i]][4];  
+					draw_sprite_ext(asset_get_index(spr), evolution, tile_x, tile_y, tile_scale, tile_scale, 0, c_white, 1);
+				}
+			}else if tile_positions_grid[# 13, global.selectedTile - 1] == 1 { // BIRD
+				// Dessin du sprite de l'asset trouvé
+				if ds_exists(list_birds, ds_type_list) { 
+					var spr = list_birds[| tile_positions_grid[# 12, i]][2]; 
+					var evolution = list_birds[| tile_positions_grid[# 12, i]][4];  
+					draw_sprite_ext(asset_get_index(spr), evolution, tile_x, tile_y, tile_scale, tile_scale, 0, c_white, 1);
+				}
 			}
-		}*/
+		}
 		
-		
+		//draw_text_color(tile_x, tile_y + 4, $"value : {tile_value}", c1, c1, c1, c1, 1);
 		
 		
 	
@@ -155,6 +171,8 @@ if ds_exists(tile_positions_list, ds_type_list) && ds_list_size(tile_positions_l
 	/*scr_draw_set_text(c_white, fnt_large, fa_left, fa_top);
 	draw_text_color(global.view_x + 180, global.view_y + 120, $"[ BIOME 1 ]", c3, c3, c3, c3, opacity1);
 	draw_set_font(fnt_base);*/
+	
+	
 	
 }   
 

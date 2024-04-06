@@ -34,12 +34,10 @@ draw_text_color(20, 20, "--------------------------------------\n" +
 scr_draw_text( , 80,	"Room actuelle",			room_actuelle);
 scr_draw_text( , 100,	"Jeu en pause",				global.pause);
 if instance_exists(oBiome_parent) scr_draw_text( , 120,	"start_fouille",	oBiome_parent.start_fouille);
-scr_draw_text( , 140,	"global.selectedGraine",	global.selectedGraine);
-
-
-
-
-
+scr_draw_text( , 140,	"global.selectedRessource",	global.selectedRessource);
+scr_draw_text( , 160,	"global.selectedTile",	global.selectedTile);
+scr_draw_text( , 180,	"global.type_selectedRessource",	global.type_selectedRessource);
+ 
 
 // ********************************************************************************************************
 

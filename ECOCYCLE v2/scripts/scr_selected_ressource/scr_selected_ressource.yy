@@ -1,9 +1,9 @@
 {
   "$GMScript":"",
-  "%Name":"scr_selected_plante",
+  "%Name":"scr_selected_ressource",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"scr_selected_plante",
+  "name":"scr_selected_ressource",
   "parent":{
     "name":"ACTION",
     "path":"folders/Scripts/ACTION.yy",

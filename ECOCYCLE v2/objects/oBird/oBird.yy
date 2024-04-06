@@ -1,7 +1,11 @@
 {
   "$GMObject":"",
   "%Name":"oBird",
-  "eventList":[],
+  "eventList":[
+    {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+  ],
   "managed":true,
   "name":"oBird",
   "overriddenProperties":[],
@@ -9,7 +13,10 @@
     "name":"0 - GAME CONTROL",
     "path":"folders/Objects/0 - GAME CONTROL.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"oRessources",
+    "path":"objects/oRessources/oRessources.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,

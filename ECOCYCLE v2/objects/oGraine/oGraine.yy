@@ -13,7 +13,10 @@
     "name":"0 - GAME CONTROL",
     "path":"folders/Objects/0 - GAME CONTROL.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"oRessources",
+    "path":"objects/oRessources/oRessources.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -31,7 +34,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"sPlante",
+    "path":"sprites/sPlante/sPlante.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }
