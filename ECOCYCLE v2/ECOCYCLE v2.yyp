@@ -17,6 +17,7 @@
     {"$GMFolder":"","%Name":"GENERAL","folderPath":"folders/Fonts/GENERAL.yy","name":"GENERAL","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Objects","folderPath":"folders/Objects.yy","name":"Objects","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"0 - GAME CONTROL","folderPath":"folders/Objects/0 - GAME CONTROL.yy","name":"0 - GAME CONTROL","resourceType":"GMFolder","resourceVersion":"2.0",},
+    {"$GMFolder":"","%Name":"BIRDS","folderPath":"folders/Objects/0 - GAME CONTROL/BIRDS.yy","name":"BIRDS","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"1 - AUTRES","folderPath":"folders/Objects/1 - AUTRES.yy","name":"1 - AUTRES","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"2 - MENU","folderPath":"folders/Objects/2 - MENU.yy","name":"2 - MENU","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"3 - INTRO","folderPath":"folders/Objects/3 - INTRO.yy","name":"3 - INTRO","resourceType":"GMFolder","resourceVersion":"2.0",},

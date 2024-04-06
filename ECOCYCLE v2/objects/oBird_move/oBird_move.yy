@@ -10,8 +10,8 @@
   "name":"oBird_move",
   "overriddenProperties":[],
   "parent":{
-    "name":"0 - GAME CONTROL",
-    "path":"folders/Objects/0 - GAME CONTROL.yy",
+    "name":"BIRDS",
+    "path":"folders/Objects/0 - GAME CONTROL/BIRDS.yy",
   },
   "parentObjectId":null,
   "persistent":false,
