@@ -10,7 +10,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"0 - GAME CONTROL",
-    "path":"folders/Objets/0 - GAME CONTROL.yy",
+    "path":"folders/Objects/0 - GAME CONTROL.yy",
   },
   "parentObjectId":null,
   "persistent":false,

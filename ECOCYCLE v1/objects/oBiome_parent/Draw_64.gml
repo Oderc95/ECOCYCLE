@@ -44,7 +44,7 @@ if ds_exists(tile_positions_list, ds_type_list) && ds_list_size(tile_positions_l
 	 // Draw shadow TileMap
 	//****************************************************************
 	// Parcourir la liste en utilisant une boucle for
-	for (var i = 0; i < ds_list_size(tile_positions_list); i += 4) { 
+	for (var i = 0; i < ds_list_size(tile_positions_list); i += 13) { 
 		var tile_x = ds_list_find_value(tile_positions_list, i + 1);
 		var tile_y = ds_list_find_value(tile_positions_list, i + 2); 
 	
@@ -57,11 +57,10 @@ if ds_exists(tile_positions_list, ds_type_list) && ds_list_size(tile_positions_l
 	 // TileMap
 	//**************************************************************** 
 	// Parcourir la liste en utilisant une boucle for
-	for (var i = 0; i < ds_list_size(tile_positions_list); i += 4) {
+	for (var i = 0; i < ds_list_size(tile_positions_list); i += 13) {
 		var tile_id = ds_list_find_value(tile_positions_list, i);
 		var tile_x = ds_list_find_value(tile_positions_list, i + 1);
-		var tile_y = ds_list_find_value(tile_positions_list, i + 2);
-	    var tile_used = ds_list_find_value(tile_positions_list, i + 3); 
+		var tile_y = ds_list_find_value(tile_positions_list, i + 2); 
 		var tile_col = c_white; 
 		
 		// Crée l'instance de l'objet avec le sprite de losange
@@ -72,8 +71,7 @@ if ds_exists(tile_positions_list, ds_type_list) && ds_list_size(tile_positions_l
 	for (var i = 0; i < tile_positions_grid_number; i++) {   
 		var tile_id		= tile_positions_grid[# 0, i];
 		var tile_x		= tile_positions_grid[# 1, i];
-		var tile_y		= tile_positions_grid[# 2, i] + 24;
-		var tile_used	= tile_positions_grid[# 3, i];
+		var tile_y		= tile_positions_grid[# 2, i] + 24; 
 		
 		var c = c_white,
 			c1 = #EF9797,
