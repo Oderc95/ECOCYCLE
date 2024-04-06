@@ -1,7 +1,7 @@
 {
   "FolderOrderSettings":[
     {"name":"Chronology","order":8,"path":"folders/Chronology.yy",},
-    {"name":"Courbes d’animation","order":12,"path":"folders/Courbes d’animation.yy",},
+    {"name":"Animation Curve","order":12,"path":"folders/Animation Curve.yy",},
     {"name":"Extensions","order":14,"path":"folders/Extensions.yy",},
     {"name":"Fonts","order":7,"path":"folders/Fonts.yy",},
     {"name":"GENERAL","order":1,"path":"folders/Fonts/GENERAL.yy",},

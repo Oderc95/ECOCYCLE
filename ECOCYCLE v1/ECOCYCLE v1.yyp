@@ -11,7 +11,7 @@
   "defaultScriptType":1,
   "Folders":[
     {"$GMFolder":"","%Name":"Chronology","folderPath":"folders/Chronology.yy","name":"Chronology","resourceType":"GMFolder","resourceVersion":"2.0",},
-    {"$GMFolder":"","%Name":"Courbes d’animation","folderPath":"folders/Courbes d’animation.yy","name":"Courbes d’animation","resourceType":"GMFolder","resourceVersion":"2.0",},
+    {"$GMFolder":"","%Name":"Animation Curve","folderPath":"folders/Animation Curve.yy","name":"Animation Curve","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Extensions","folderPath":"folders/Extensions.yy","name":"Extensions","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Fonts","folderPath":"folders/Fonts.yy","name":"Fonts","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"GENERAL","folderPath":"folders/Fonts/GENERAL.yy","name":"GENERAL","resourceType":"GMFolder","resourceVersion":"2.0",},
