@@ -1,11 +1,11 @@
 {
   "$GMObject":"",
-  "%Name":"o_button_demarrer",
+  "%Name":"o_button_start",
   "eventList":[
     {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":7,"eventType":6,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"o_button_demarrer",
+  "name":"o_button_start",
   "overriddenProperties":[],
   "parent":{
     "name":"2 - MENU",

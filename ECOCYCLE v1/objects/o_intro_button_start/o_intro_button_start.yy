@@ -1,15 +1,15 @@
 {
   "$GMObject":"",
-  "%Name":"o_button_quitter",
+  "%Name":"o_intro_button_start",
   "eventList":[
     {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":7,"eventType":6,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"o_button_quitter",
+  "name":"o_intro_button_start",
   "overriddenProperties":[],
   "parent":{
-    "name":"2 - MENU",
-    "path":"folders/Objects/2 - MENU.yy",
+    "name":"3 - INTRO",
+    "path":"folders/Objects/3 - INTRO.yy",
   },
   "parentObjectId":{
     "name":"o_button",
@@ -33,8 +33,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"s_button_quitter",
-    "path":"sprites/s_button_quitter/s_button_quitter.yy",
+    "name":"s_button_demarrer",
+    "path":"sprites/s_button_demarrer/s_button_demarrer.yy",
   },
   "spriteMaskId":null,
   "visible":true,

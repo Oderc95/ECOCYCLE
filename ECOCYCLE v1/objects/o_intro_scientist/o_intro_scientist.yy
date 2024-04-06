@@ -1,15 +1,17 @@
 {
   "$GMObject":"",
-  "%Name":"o_button",
+  "%Name":"o_intro_scientist",
   "eventList":[
     {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"o_button",
+  "name":"o_intro_scientist",
   "overriddenProperties":[],
   "parent":{
-    "name":"0 - GAME CONTROL",
-    "path":"folders/Objects/0 - GAME CONTROL.yy",
+    "name":"3 - INTRO",
+    "path":"folders/Objects/3 - INTRO.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -29,7 +31,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"s_level_scientist",
+    "path":"sprites/s_level_scientist/s_level_scientist.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }

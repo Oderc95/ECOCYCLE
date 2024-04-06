@@ -1,17 +1,20 @@
 {
   "$GMObject":"",
-  "%Name":"o_button",
+  "%Name":"o_button_quit",
   "eventList":[
-    {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":7,"eventType":6,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"o_button",
+  "name":"o_button_quit",
   "overriddenProperties":[],
   "parent":{
-    "name":"0 - GAME CONTROL",
-    "path":"folders/Objects/0 - GAME CONTROL.yy",
+    "name":"2 - MENU",
+    "path":"folders/Objects/2 - MENU.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"o_button",
+    "path":"objects/o_button/o_button.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -29,7 +32,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"s_button_quitter",
+    "path":"sprites/s_button_quitter/s_button_quitter.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }
