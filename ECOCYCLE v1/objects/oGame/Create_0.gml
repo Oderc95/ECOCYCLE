@@ -42,8 +42,8 @@ display_set_gui_size(global.view_width, global.view_height);
 /*************************************************************/
 if !instance_exists(oDevMode) instance_create_layer(0, 0, "GUI", oDevMode);
 
-// Main
-if !instance_exists(oMain) instance_create_layer(0, 0, "Instances", oMain);
+// GUI
+if !instance_exists(oGUI) instance_create_layer(0, 0, "GUI", oGUI);
 
   /*************************************************************/
  /* VARIABLES									              */

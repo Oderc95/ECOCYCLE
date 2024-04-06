@@ -14,7 +14,7 @@ opacity4 = 0;
 /// @description Map setting
  
 // Tile size
-tile_scale = 0.8;
+tile_scale = 1.7;
 tile_w = sprite_get_width(sTile) * tile_scale;
 tile_h = sprite_get_height(sTile) * tile_scale;
 
@@ -33,7 +33,7 @@ nb_row = 5;
 map_left = map_x - (tile_w * nb_col * 0.5);
 map_right = map_x + (tile_w * nb_col * 0.5);
 map_top = map_y;
-map_bot = map_y + 64 + (tile_h * nb_row * 0.5);
+map_bot = map_y + 80 + (tile_h * nb_row * 0.5);
 
 // Distance shadow
 map_shadow_dist = 48;
@@ -74,11 +74,11 @@ for (var i = 0; i < nb_row; i++) {
 	        ds_list_add(tile_positions_list, tile_y);
 			ds_list_add(tile_positions_list, tile_categorie);
 			ds_list_add(tile_positions_list, tile_sideHG);  
+			ds_list_add(tile_positions_list, tile_sideH);
 			ds_list_add(tile_positions_list, tile_sideHD);  
 			ds_list_add(tile_positions_list, tile_sideG);  
 			ds_list_add(tile_positions_list, tile_sideBG);  
-			ds_list_add(tile_positions_list, tile_sideB);  
-			ds_list_add(tile_positions_list, tile_sideHG);  
+			ds_list_add(tile_positions_list, tile_sideB);     
 			ds_list_add(tile_positions_list, tile_sideBD);  
 			ds_list_add(tile_positions_list, tile_sideD);  
 			ds_list_add(tile_positions_list, tile_value);  
