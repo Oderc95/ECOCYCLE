@@ -19,8 +19,8 @@
   ],
   "name":"rm_50_main",
   "parent":{
-    "name":"Pièces",
-    "path":"folders/Pièces.yy",
+    "name":"Room",
+    "path":"folders/Room.yy",
   },
   "parentRoom":null,
   "physicsSettings":{
