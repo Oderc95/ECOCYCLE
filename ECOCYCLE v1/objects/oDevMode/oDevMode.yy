@@ -10,8 +10,8 @@
   "name":"oDevMode",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"0 - GAME CONTROL",
+    "path":"folders/Objects/0 - GAME CONTROL.yy",
   },
   "parentObjectId":null,
   "persistent":true,

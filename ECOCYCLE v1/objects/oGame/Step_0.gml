@@ -17,6 +17,7 @@ if (keyboard_check(vk_escape) || (gamepad_button_check_pressed(0, gp_select))) {
 
 #endregion
 
+// Comment
 
   /*************************************************************/
  /* REGLES								                      */
