@@ -10,8 +10,8 @@
   "name":"oRegles",
   "overriddenProperties":[],
   "parent":{
-    "name":"ECOCYCLE v1",
-    "path":"ECOCYCLE v1.yyp",
+    "name":"0 - GAME CONTROL",
+    "path":"folders/Objects/0 - GAME CONTROL.yy",
   },
   "parentObjectId":null,
   "persistent":false,
